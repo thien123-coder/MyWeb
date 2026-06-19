@@ -7,111 +7,144 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   color: #1f2937;
-  background-color: #e0f7fa;
+  background-color: #f8fafc;
 }
 
-h1, h2, h3, p {
+h1,
+h2,
+h3,
+p {
   margin-top: 0;
 }
 
 a {
-  color: #0288d1;
+  color: #2563eb;
 }
 
 
-/* =========================
-   Chặng 2: Header
-========================= */
+/* Chặng 2: class, id, selector kết hợp và cascade */
 .site-header {
   padding: 18px 8%;
   background-color: #0288d1;
-  border-bottom: 3px solid #01579b;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .brand {
-  font-size: 28px;
-  font-weight: bold;
+  font-weight: 800;
+  font-size: 24px;
   color: white;
 }
 
 .main-nav a {
-  margin-left: 20px;
+  margin-right: 16px;
   text-decoration: none;
+  font-weight: 700;
   color: white;
-  font-weight: bold;
-  transition: 0.3s;
 }
 
 .main-nav a:hover {
   color: #ffe082;
 }
 
-/* =========================
-   Hero
-========================= */
+#main-title {
+  color: white;
+}
+
+
+/* Chặng 3: màu sắc, nền và phong cách nhận diện */
+:root {
+  --primary: #0288d1;
+  --accent: #ffc107;
+  --soft: #e0f7fa;
+  --dark: #01579b;
+}
+
 .hero {
+  padding: 80px 8%;
+  color: white;
   text-align: center;
-  padding: 80px 10%;
-  background: linear-gradient(to bottom, #4fc3f7, #b3e5fc);
+  background: linear-gradient(135deg, var(--primary), #06b6d4);
 }
 
 .eyebrow {
-  color: #01579b;
   font-weight: bold;
   text-transform: uppercase;
 }
 
-#main-title {
-  color: #01579b;
-  font-size: 48px;
-  margin-bottom: 20px;
-}
-
 .intro {
-  font-size: 18px;
   max-width: 700px;
-  margin: auto;
+  margin: 20px auto;
   line-height: 1.6;
 }
 
-/* Nút */
 .primary-button {
   display: inline-block;
-  margin-top: 25px;
-  padding: 12px 28px;
-  background-color: #0288d1;
-  color: white;
+  padding: 12px 18px;
+  background-color: var(--accent);
+  color: #fff;
+  border-radius: 999px;
   text-decoration: none;
-  border-radius: 8px;
   font-weight: bold;
 }
 
 .primary-button:hover {
-  background-color: #01579b;
+  background-color: #ffb300;
 }
 
-/* =========================
-   Giới thiệu
-========================= */
 .about-section {
-  padding: 60px 10%;
+  padding: 60px 8%;
   background-color: white;
 }
 
 .about-section h2 {
-  color: #01579b;
-  text-align: center;
-  margin-bottom: 25px;
-}
-
-.topic-list {
-  margin-top: 20px;
-  line-height: 2;
+  color: var(--dark);
 }
 
 .topic-list li {
-  color: #374151;
+  margin-bottom: 10px;
+}
+
+.style-guide {
+  padding: 60px 8%;
+  background-color: var(--soft);
+}
+
+.swatches {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 180px;
+  padding: 18px;
+  border-radius: 16px;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.swatch-primary {
+  background-color: var(--primary);
+}
+
+.swatch-accent {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+.swatch-soft {
+  color: var(--dark);
+  background-color: var(--soft);
+  border: 2px solid var(--primary);
+}
+.hero-image,
+.about-image {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
