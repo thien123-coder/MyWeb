@@ -208,21 +208,39 @@ button {
 
 
 /* Chặng 8: CSS Grid cho thư viện/danh sách nội dung */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+    margin-top:30px;
 }
 
-.portfolio-grid article {
-  min-height: 120px;
-  padding: 24px;
-  border-radius: 22px;
-  background-color: #ffffff;
-  border: 1px solid #dbe3ef;
-  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.07);
+.activity-card{
+    background:#fff;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 5px 15px rgba(0,0,0,0.15);
+    transition:.3s;
+    text-align:center;
 }
 
+.activity-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.activity-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+.activity-card h3{
+    margin:18px 0;
+    color:#0f4c81;
+    font-size:22px;
+}
 
 /* Chặng 9: responsive web design và hoàn thiện */
 .contact-form {
